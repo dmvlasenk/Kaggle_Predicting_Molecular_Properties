@@ -1,0 +1,300 @@
+*** Training Model for 1JHN ***
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'd_1_0', 'd_2_0',
+       'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1', 'd_4_2', 'd_4_3',
+       'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1', 'd_6_2', 'd_6_3',
+       'scalar_coupling_constant'],
+      dtype='object')
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'd_1_0', 'd_2_0',
+       'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1', 'd_4_2', 'd_4_3',
+       'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1', 'd_6_2', 'd_6_3'],
+      dtype='object')
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.12424	valid_1's l1: 1.1446
+[200]	training's l1: 0.929061	valid_1's l1: 0.955209
+[300]	training's l1: 0.834008	valid_1's l1: 0.864223
+[400]	training's l1: 0.773036	valid_1's l1: 0.805616
+[500]	training's l1: 0.731304	valid_1's l1: 0.767025
+[600]	training's l1: 0.70014	valid_1's l1: 0.737649
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.70014	valid_1's l1: 0.737649
+1JHN Fold 0, logMAE: -0.3042870054485673
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.10735	valid_1's l1: 1.10969
+[200]	training's l1: 0.919284	valid_1's l1: 0.928254
+[300]	training's l1: 0.826539	valid_1's l1: 0.843348
+[400]	training's l1: 0.76852	valid_1's l1: 0.792233
+[500]	training's l1: 0.732291	valid_1's l1: 0.758076
+[600]	training's l1: 0.701566	valid_1's l1: 0.729117
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.701566	valid_1's l1: 0.729117
+1JHN Fold 1, logMAE: -0.31592066690322484
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.12248	valid_1's l1: 1.13111
+[200]	training's l1: 0.930419	valid_1's l1: 0.941842
+[300]	training's l1: 0.839014	valid_1's l1: 0.855045
+[400]	training's l1: 0.77713	valid_1's l1: 0.794815
+[500]	training's l1: 0.736425	valid_1's l1: 0.758533
+[600]	training's l1: 0.702357	valid_1's l1: 0.725724
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.702357	valid_1's l1: 0.725724
+1JHN Fold 2, logMAE: -0.3205850863259217
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.11766	valid_1's l1: 1.11339
+[200]	training's l1: 0.91397	valid_1's l1: 0.922938
+[300]	training's l1: 0.830954	valid_1's l1: 0.84344
+[400]	training's l1: 0.772409	valid_1's l1: 0.787508
+[500]	training's l1: 0.733108	valid_1's l1: 0.753025
+[600]	training's l1: 0.70139	valid_1's l1: 0.724146
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.70139	valid_1's l1: 0.724146
+1JHN Fold 3, logMAE: -0.3227627240437777
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.12311	valid_1's l1: 1.16613
+[200]	training's l1: 0.917538	valid_1's l1: 0.957139
+[300]	training's l1: 0.828371	valid_1's l1: 0.865204
+[400]	training's l1: 0.765096	valid_1's l1: 0.802263
+[500]	training's l1: 0.725059	valid_1's l1: 0.761831
+[600]	training's l1: 0.693036	valid_1's l1: 0.731276
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.693036	valid_1's l1: 0.731276
+1JHN Fold 4, logMAE: -0.31296439108704693
+*** Training Model for 1JHC ***
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'atom_9', 'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0',
+       'd_4_1', 'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0',
+       'd_6_1', 'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0',
+       'd_8_1', 'd_8_2', 'd_8_3', 'd_9_0', 'd_9_1', 'd_9_2', 'd_9_3',
+       'scalar_coupling_constant'],
+      dtype='object')
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'atom_9', 'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0',
+       'd_4_1', 'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0',
+       'd_6_1', 'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0',
+       'd_8_1', 'd_8_2', 'd_8_3', 'd_9_0', 'd_9_1', 'd_9_2', 'd_9_3'],
+      dtype='object')
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 2.60157	valid_1's l1: 2.60599
+[200]	training's l1: 2.29729	valid_1's l1: 2.3019
+[300]	training's l1: 2.12986	valid_1's l1: 2.13458
+[400]	training's l1: 2.01629	valid_1's l1: 2.0209
+[500]	training's l1: 1.93544	valid_1's l1: 1.93988
+[600]	training's l1: 1.87308	valid_1's l1: 1.87658
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 1.87308	valid_1's l1: 1.87658
+1JHC Fold 0, logMAE: 0.6294522260979787
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 2.57815	valid_1's l1: 2.57016
+[200]	training's l1: 2.27286	valid_1's l1: 2.26783
+[300]	training's l1: 2.11025	valid_1's l1: 2.1061
+[400]	training's l1: 2.00018	valid_1's l1: 1.99664
+[500]	training's l1: 1.92343	valid_1's l1: 1.92026
+[600]	training's l1: 1.86351	valid_1's l1: 1.86177
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 1.86351	valid_1's l1: 1.86177
+1JHC Fold 1, logMAE: 0.621528429223184
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 2.59625	valid_1's l1: 2.59359
+[200]	training's l1: 2.28405	valid_1's l1: 2.28247
+[300]	training's l1: 2.11535	valid_1's l1: 2.11537
+[400]	training's l1: 2.00128	valid_1's l1: 2.00319
+[500]	training's l1: 1.92189	valid_1's l1: 1.92357
+[600]	training's l1: 1.86079	valid_1's l1: 1.86208
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 1.86079	valid_1's l1: 1.86208
+1JHC Fold 2, logMAE: 0.6216928504135038
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 2.59459	valid_1's l1: 2.60043
+[200]	training's l1: 2.28474	valid_1's l1: 2.29173
+[300]	training's l1: 2.12074	valid_1's l1: 2.12949
+[400]	training's l1: 2.01056	valid_1's l1: 2.02086
+[500]	training's l1: 1.93427	valid_1's l1: 1.94599
+[600]	training's l1: 1.8706	valid_1's l1: 1.88424
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 1.8706	valid_1's l1: 1.88424
+1JHC Fold 3, logMAE: 0.6335243957528855
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 2.57772	valid_1's l1: 2.59319
+[200]	training's l1: 2.27834	valid_1's l1: 2.29477
+[300]	training's l1: 2.12349	valid_1's l1: 2.13997
+[400]	training's l1: 2.00942	valid_1's l1: 2.02553
+[500]	training's l1: 1.93151	valid_1's l1: 1.94646
+[600]	training's l1: 1.8676	valid_1's l1: 1.88116
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 1.8676	valid_1's l1: 1.88116
+1JHC Fold 4, logMAE: 0.6318861919477398
+*** Training Model for 2JHH ***
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1',
+       'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1',
+       'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0', 'd_8_1',
+       'd_8_2', 'd_8_3', 'scalar_coupling_constant'],
+      dtype='object')
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1',
+       'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1',
+       'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0', 'd_8_1',
+       'd_8_2', 'd_8_3'],
+      dtype='object')
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.650855	valid_1's l1: 0.651591
+[200]	training's l1: 0.592695	valid_1's l1: 0.595076
+[300]	training's l1: 0.556715	valid_1's l1: 0.559249
+[400]	training's l1: 0.527897	valid_1's l1: 0.530586
+[500]	training's l1: 0.505958	valid_1's l1: 0.509129
+[600]	training's l1: 0.488487	valid_1's l1: 0.492017
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.488487	valid_1's l1: 0.492017
+2JHH Fold 0, logMAE: -0.7092426730683954
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.660349	valid_1's l1: 0.660749
+[200]	training's l1: 0.59277	valid_1's l1: 0.593388
+[300]	training's l1: 0.556981	valid_1's l1: 0.558095
+[400]	training's l1: 0.529966	valid_1's l1: 0.531943
+[500]	training's l1: 0.511039	valid_1's l1: 0.513719
+[600]	training's l1: 0.494832	valid_1's l1: 0.497742
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.494832	valid_1's l1: 0.497742
+2JHH Fold 1, logMAE: -0.6976733660722833
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.654999	valid_1's l1: 0.657133
+[200]	training's l1: 0.59103	valid_1's l1: 0.593159
+[300]	training's l1: 0.552981	valid_1's l1: 0.555546
+[400]	training's l1: 0.526364	valid_1's l1: 0.528897
+[500]	training's l1: 0.505886	valid_1's l1: 0.508799
+[600]	training's l1: 0.490842	valid_1's l1: 0.494044
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.490842	valid_1's l1: 0.494044
+2JHH Fold 2, logMAE: -0.7051307477915538
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.644211	valid_1's l1: 0.646532
+[200]	training's l1: 0.582268	valid_1's l1: 0.585516
+[300]	training's l1: 0.549654	valid_1's l1: 0.552853
+[400]	training's l1: 0.525745	valid_1's l1: 0.529263
+[500]	training's l1: 0.505678	valid_1's l1: 0.509786
+[600]	training's l1: 0.489037	valid_1's l1: 0.493653
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.489037	valid_1's l1: 0.493653
+2JHH Fold 3, logMAE: -0.7059232155656979
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.650466	valid_1's l1: 0.65125
+[200]	training's l1: 0.585787	valid_1's l1: 0.587577
+[300]	training's l1: 0.549429	valid_1's l1: 0.551628
+[400]	training's l1: 0.524855	valid_1's l1: 0.527464
+[500]	training's l1: 0.505147	valid_1's l1: 0.507778
+[600]	training's l1: 0.489708	valid_1's l1: 0.492839
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.489708	valid_1's l1: 0.492839
+2JHH Fold 4, logMAE: -0.7075733638774628
+*** Training Model for 2JHN ***
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1',
+       'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1',
+       'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0', 'd_8_1',
+       'd_8_2', 'd_8_3', 'scalar_coupling_constant'],
+      dtype='object')
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1',
+       'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1',
+       'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0', 'd_8_1',
+       'd_8_2', 'd_8_3'],
+      dtype='object')
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.651984	valid_1's l1: 0.664053
+[200]	training's l1: 0.528666	valid_1's l1: 0.538219
+[300]	training's l1: 0.470739	valid_1's l1: 0.479035
+[400]	training's l1: 0.433817	valid_1's l1: 0.443102
+[500]	training's l1: 0.408229	valid_1's l1: 0.417858
+[600]	training's l1: 0.388222	valid_1's l1: 0.397882
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.388222	valid_1's l1: 0.397882
+2JHN Fold 0, logMAE: -0.9215992980059466
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.660737	valid_1's l1: 0.663167
+[200]	training's l1: 0.532445	valid_1's l1: 0.536562
+[300]	training's l1: 0.471742	valid_1's l1: 0.477661
+[400]	training's l1: 0.435848	valid_1's l1: 0.442248
+[500]	training's l1: 0.41049	valid_1's l1: 0.417906
+[600]	training's l1: 0.391196	valid_1's l1: 0.399122
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.391196	valid_1's l1: 0.399122
+2JHN Fold 1, logMAE: -0.9184874846642391
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.660877	valid_1's l1: 0.658264
+[200]	training's l1: 0.533259	valid_1's l1: 0.533907
+[300]	training's l1: 0.473657	valid_1's l1: 0.47722
+[400]	training's l1: 0.438999	valid_1's l1: 0.444083
+[500]	training's l1: 0.414415	valid_1's l1: 0.420262
+[600]	training's l1: 0.394512	valid_1's l1: 0.401262
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.394512	valid_1's l1: 0.401262
+2JHN Fold 2, logMAE: -0.9131414734012678
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.661281	valid_1's l1: 0.665666
+[200]	training's l1: 0.535572	valid_1's l1: 0.543676
+[300]	training's l1: 0.475656	valid_1's l1: 0.483075
+[400]	training's l1: 0.439291	valid_1's l1: 0.447153
+[500]	training's l1: 0.412725	valid_1's l1: 0.421249
+[600]	training's l1: 0.393337	valid_1's l1: 0.401821
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.393337	valid_1's l1: 0.401821
+2JHN Fold 3, logMAE: -0.9117485729972415
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 0.654015	valid_1's l1: 0.652941
+[200]	training's l1: 0.533098	valid_1's l1: 0.534087
+[300]	training's l1: 0.474517	valid_1's l1: 0.47734
+[400]	training's l1: 0.437539	valid_1's l1: 0.441412
+[500]	training's l1: 0.412306	valid_1's l1: 0.417594
+[600]	training's l1: 0.393303	valid_1's l1: 0.39942
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.393303	valid_1's l1: 0.39942
+2JHN Fold 4, logMAE: -0.9177420775035722
+*** Training Model for 2JHC ***
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1',
+       'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1',
+       'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0', 'd_8_1',
+       'd_8_2', 'd_8_3', 'scalar_coupling_constant'],
+      dtype='object')
+Index(['atom_2', 'atom_3', 'atom_4', 'atom_5', 'atom_6', 'atom_7', 'atom_8',
+       'd_1_0', 'd_2_0', 'd_2_1', 'd_3_0', 'd_3_1', 'd_3_2', 'd_4_0', 'd_4_1',
+       'd_4_2', 'd_4_3', 'd_5_0', 'd_5_1', 'd_5_2', 'd_5_3', 'd_6_0', 'd_6_1',
+       'd_6_2', 'd_6_3', 'd_7_0', 'd_7_1', 'd_7_2', 'd_7_3', 'd_8_0', 'd_8_1',
+       'd_8_2', 'd_8_3'],
+      dtype='object')
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.24237	valid_1's l1: 1.2441
+[200]	training's l1: 1.09083	valid_1's l1: 1.09309
+[300]	training's l1: 1.01679	valid_1's l1: 1.01877
+[400]	training's l1: 0.956045	valid_1's l1: 0.957539
+[500]	training's l1: 0.917644	valid_1's l1: 0.91937
+[600]	training's l1: 0.886107	valid_1's l1: 0.887954
+Did not meet early stopping. Best iteration is:
+[600]	training's l1: 0.886107	valid_1's l1: 0.887954
+2JHC Fold 0, logMAE: -0.11883568614355633
+Training until validation scores don't improve for 200 rounds.
+[100]	training's l1: 1.21989	valid_1's l1: 1.2192
+[200]	training's l1: 1.08507	valid_1's l1: 1.08514
+[300]	training's l1: 1.01452	valid_1's l1: 1.01495
+
+scalar_coupling_constant
+id	
+4658147	12.592443
+4658148	162.788345
+4658149	10.759270
+4658150	162.788345
+4658151	12.592443
+4658152	95.219749
+4658153	3.462163
+4658154	-7.559705
+4658155	-9.795329
+4658156	95.192291
+
+type	cv_score
+0	1JHN	-0.315304
+1	1JHC	0.627617
+2	2JHH	-0.705109
+3	2JHN	-0.916544
+4	2JHC	-0.120961
+5	3JHH	-0.463475
+6	3JHC	-0.018081
+7	3JHN	-1.032626
