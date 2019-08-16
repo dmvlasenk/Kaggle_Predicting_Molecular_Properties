@@ -3,6 +3,10 @@
 /download
 /input
 /output
+
+#catboost
 /src/catboost_info
+
+/src/*.tmp
 
 
