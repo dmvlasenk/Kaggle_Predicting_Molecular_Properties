@@ -7,6 +7,8 @@
 #catboost
 /src/catboost_info
 
+#jupyter notebook tmp
 /src/*.tmp
+/src/.ipynb_checkpoints
 
 
