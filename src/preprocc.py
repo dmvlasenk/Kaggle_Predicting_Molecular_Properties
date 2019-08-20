@@ -55,6 +55,7 @@ import os
 
 
 DATA_PATH = '..\\input'
+INPUT_ADDED = '..\\input_added'
 SUBMISSIONS_PATH = '..\\output'
 # use atomic numbers to recode atomic names
 ATOMIC_NUMBERS = {
@@ -99,7 +100,7 @@ train_csv.head(10)
 # In[153]:
 
 
-train_csv, _ = train_test_split(train_csv, test_size=0.999, random_state=42)
+#train_csv, _ = train_test_split(train_csv, test_size=0.999, random_state=42)
 
 
 # #### Train_CSV Params
@@ -241,50 +242,6 @@ def add_n_atoms(base, structures):
 
 # In[167]:
 
-
-def build_couple_dataframeOld(some_csv, structures_csv, coupling_type, n_atoms=10):
-    base, structures = build_type_dataframes(some_csv, structures_csv, coupling_type)
-    base = add_coordinates(base, structures, 0)
-    base = add_coordinates(base, structures, 1)
-    
-    base = base.drop(['atom_0', 'atom_1'], axis=1)
-    atoms = base.drop('id', axis=1).copy()
-    if 'scalar_coupling_constant' in some_csv:
-        atoms = atoms.drop(['scalar_coupling_constant'], axis=1)
-        
-    add_center(atoms)
-    
-    
-    atoms = atoms.drop(['x_0', 'y_0', 'z_0', 'x_1', 'y_1', 'z_1'], axis=1)
-
-    atoms = merge_all_atoms(atoms, structures)
-    
-    add_distance_to_center(atoms)
-    
-    atoms = atoms.drop(['x_c', 'y_c', 'z_c', 'atom_index'], axis=1)
-    atoms.sort_values(['molecule_index', 'atom_index_0', 'atom_index_1', 'd_c'], inplace=True)
-    atom_groups = atoms.groupby(['molecule_index', 'atom_index_0', 'atom_index_1'])
-    atoms['num'] = atom_groups.cumcount() + 2
-    atoms = atoms.drop(['d_c'], axis=1)
-    atoms = atoms[atoms['num'] < n_atoms]
-
-    atoms = atoms.set_index(['molecule_index', 'atom_index_0', 'atom_index_1', 'num']).unstack()
-    atoms.columns = [f'{col[0]}_{col[1]}' for col in atoms.columns]
-    atoms = atoms.reset_index()
-    
-    # downcast back to int8
-    for col in atoms.columns:
-        if col.startswith('atom_'):
-            atoms[col] = atoms[col].fillna(0).astype('int8')
-            
-    atoms['molecule_index'] = atoms['molecule_index'].astype('int32')
-    
-    full = add_atoms(base, atoms)
-    add_distances(full)
-    
-    full.sort_values('id', inplace=True)
-    
-    return full
 
 
 # In[168]:
@@ -481,15 +438,16 @@ def build_couple_dataframe(some_csv, structures_csv, coupling_type, n_atoms=10):
 
 
 
-some_csv = train_csv #[:6000]
-
-types = some_csv.type.unique()
+#some_csv = test_csv #[:600]
+types = train_csv.type.unique()
 n_atoms = train_csv.atom_index_0.max()
-appended_data = []
 for coupling_type in types:
-    df = build_couple_dataframe(some_csv, structures_csv, coupling_type, n_atoms)
-    df['type'] = coupling_type
-    appended_data.append(df)
-full = pd.concat(appended_data)
-full.to_csv(f'{SUBMISSIONS_PATH}/coors.csv')
+    cur_test_csv = test_csv[test_csv.type == coupling_type]
+    cur_train_csv = train_csv[train_csv.type == coupling_type]
+    n_atoms = cur_train_csv.atom_index_0.max()
+    df_test = build_couple_dataframe(cur_test_csv, structures_csv, coupling_type, n_atoms)
+    df_test.to_csv(f'{INPUT_ADDED}/test_{coupling_type}.csv')
+    df_train = build_couple_dataframe(cur_train_csv, structures_csv, coupling_type, n_atoms)
+    df_train.to_csv(f'{INPUT_ADDED}/{coupling_type}.csv')
+
     

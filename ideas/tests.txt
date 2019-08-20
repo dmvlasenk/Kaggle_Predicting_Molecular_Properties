@@ -1,0 +1,491 @@
+type 1JHC
+error all atoms: -0.2579421127766253
+
+[9600]	training's l1: 0.264415	valid_1's l1: 0.774382
+[9700]	training's l1: 0.261817	valid_1's l1: 0.77387
+[9800]	training's l1: 0.259313	valid_1's l1: 0.773462
+[9900]	training's l1: 0.256948	valid_1's l1: 0.773069
+[10000]	training's l1: 0.254535	valid_1's l1: 0.77264
+Did not meet early stopping. Best iteration is:
+[10000]	training's l1: 0.254535	valid_1's l1: 0.77264
+
+
+
+	feature	importance
+53	r_y_2	14876
+26	r_x_1	13959
+79	r_z_3	12746
+30	r_x_5	12320
+29	r_x_4	11794
+54	r_y_3	11751
+28	r_x_3	11478
+55	r_y_4	11016
+56	r_y_5	10854
+27	r_x_2	10548
+32	r_x_7	10517
+31	r_x_6	10476
+57	r_y_6	10094
+34	r_x_9	10042
+33	r_x_8	9943
+58	r_y_7	9846
+36	r_x_11	9818
+35	r_x_10	9785
+59	r_y_8	9523
+62	r_y_11	9377
+37	r_x_12	9358
+61	r_y_10	9212
+63	r_y_12	9156
+60	r_y_9	8935
+80	r_z_4	8925
+81	r_z_5	8828
+38	r_x_13	8716
+64	r_y_13	8672
+82	r_z_6	8520
+83	r_z_7	8143
+39	r_x_14	8123
+86	r_z_10	8091
+65	r_y_14	8082
+84	r_z_8	7945
+87	r_z_11	7769
+88	r_z_12	7766
+40	r_x_15	7754
+85	r_z_9	7729
+89	r_z_13	7431
+66	r_y_15	7351
+90	r_z_14	7090
+41	r_x_16	6765
+91	r_z_15	6506
+67	r_y_16	6220
+92	r_z_16	5636
+42	r_x_17	5630
+68	r_y_17	4866
+93	r_z_17	4423
+43	r_x_18	4183
+69	r_y_18	3604
+94	r_z_18	3282
+7	atom_9	2881
+1	atom_3	2593
+44	r_x_19	2578
+6	atom_8	2573
+8	atom_10	2571
+9	atom_11	2365
+70	r_y_19	2286
+10	atom_12	2245
+95	r_z_19	2141
+4	atom_6	2121
+5	atom_7	2105
+11	atom_13	2033
+0	atom_2	1770
+45	r_x_20	1766
+12	atom_14	1750
+3	atom_5	1668
+71	r_y_20	1551
+13	atom_15	1456
+96	r_z_20	1375
+14	atom_16	1183
+2	atom_4	904
+15	atom_17	888
+46	r_x_21	741
+72	r_y_21	706
+16	atom_18	609
+97	r_z_21	592
+47	r_x_22	525
+17	atom_19	499
+98	r_z_22	482
+73	r_y_22	453
+18	atom_20	234
+74	r_y_23	184
+48	r_x_23	154
+19	atom_21	139
+99	r_z_23	137
+49	r_x_24	135
+75	r_y_24	133
+100	r_z_24	92
+20	atom_22	83
+102	r_z_26	29
+21	atom_23	28
+51	r_x_26	27
+50	r_x_25	25
+101	r_z_25	23
+76	r_y_25	21
+77	r_y_26	19
+22	atom_24	16
+23	atom_25	5
+103	r_z_27	4
+78	r_y_27	3
+52	r_x_27	2
+24	atom_26	1
+25	atom_27	0
+
+
+
+23 atoms
+
+feature	importance
+21	r_x_1	9218
+34	r_x_14	8823
+32	r_x_12	8793
+33	r_x_13	8770
+52	r_y_11	8740
+53	r_y_12	8726
+54	r_y_13	8526
+31	r_x_11	8488
+55	r_y_14	8446
+25	r_x_5	8438
+51	r_y_10	8416
+24	r_x_4	8341
+43	r_y_2	8330
+35	r_x_15	8142
+30	r_x_10	8070
+56	r_y_15	8065
+73	r_z_12	7929
+50	r_y_9	7922
+36	r_x_16	7829
+74	r_z_13	7813
+45	r_y_4	7606
+29	r_x_9	7602
+75	r_z_14	7520
+64	r_z_3	7409
+49	r_y_8	7356
+26	r_x_6	7351
+71	r_z_10	7334
+76	r_z_15	7307
+72	r_z_11	7296
+70	r_z_9	7252
+28	r_x_8	7251
+48	r_y_7	7105
+57	r_y_16	7088
+47	r_y_6	7064
+27	r_x_7	7034
+69	r_z_8	7029
+68	r_z_7	7010
+67	r_z_6	6881
+46	r_y_5	6792
+44	r_y_3	6747
+37	r_x_17	6645
+23	r_x_3	6576
+22	r_x_2	6492
+66	r_z_5	6490
+77	r_z_16	6384
+58	r_y_17	5919
+65	r_z_4	5722
+78	r_z_17	5258
+38	r_x_18	5163
+59	r_y_18	4642
+79	r_z_18	3772
+39	r_x_19	3166
+60	r_y_19	2901
+80	r_z_19	2587
+40	r_x_20	2077
+61	r_y_20	1936
+9	atom_11	1897
+11	atom_13	1848
+12	atom_14	1768
+10	atom_12	1758
+81	r_z_20	1609
+13	atom_15	1522
+14	atom_16	1518
+7	atom_9	1375
+8	atom_10	1358
+15	atom_17	1312
+6	atom_8	1175
+5	atom_7	984
+41	r_x_21	953
+16	atom_18	916
+4	atom_6	851
+62	r_y_21	832
+42	r_x_22	823
+82	r_z_21	769
+83	r_z_22	725
+1	atom_3	720
+17	atom_19	693
+63	r_y_22	691
+3	atom_5	644
+0	atom_2	500
+18	atom_20	364
+19	atom_21	325
+2	atom_4	237
+20	atom_22	124
+
+error 20 atoms:
+-0.260751686670804
+
+filter 0.99
+error 5000 iter: 0.27654319464482535
+				 0.2845523778732564
+
+cat features no filter:
+-0.2690462873596508
+
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.05,
+    'num_leaves': 64,
+    'min_child_samples': 60,
+    'max_depth': 6,
+    'subsample_freq': 1,
+    'subsample': 0.9,
+    'reg_alpha': 0.1,
+    'reg_lambda': 0.3,
+    'bagging_freq': 5000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+
+lr 0.005
+19800]	training's l1: 0.147029	valid_1's l1: 1.23643
+[19900]	training's l1: 0.146074	valid_1's l1: 1.23636
+[20000]	training's l1: 0.145136	valid_1's l1: 1.23624
+Did not meet early stopping. Best iteration is:
+[20000]	training's l1: 0.145136	valid_1's l1: 1.23624
+0.21207275048727978
+
+'learning_rate': 0.02
+[10000]	training's l1: 0.610584	valid_1's l1: 1.29758
+[20000]	training's l1: 0.346223	valid_1's l1: 1.24841
+lr 0.01
+[10000]	training's l1: 0.867255	valid_1's l1: 1.3648
+[20000]	training's l1: 0.580178	valid_1's l1: 1.28134
+
+bagging_freq
+
+0.1991662843908723
+
+
+n_atoms = 15
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.02,
+    'num_leaves': 64,
+    'min_child_samples': 60,
+    'max_depth': 6,
+    'subsample_freq': 1,
+    'subsample': 0.9,
+    'reg_alpha': 0.1,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+[40000]	training's l1: 0.134443	valid_1's l1: 1.19801
+0.18066174971216328
+
+n_athoms = 12
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.02,
+    'num_leaves': 64,
+    'min_child_samples': 60,
+    'max_depth': 6,
+    'subsample_freq': 1,
+    'subsample': 0.9,
+    'reg_alpha': 0.1,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+[40000]	training's l1: 0.20014	valid_1's l1: 1.18966
+0.173664673794363
+
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.05,
+    'num_leaves': 64,
+    'min_child_samples': 60,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+[10000]	training's l1: 0.189019	valid_1's l1: 1.19798
+0.18063789157164234
+
+
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.05,
+    'num_leaves': 64,
+    'min_child_samples': 60,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+[10000]	training's l1: 0.489184	valid_1's l1: 0.773026
+-0.2574375925485048
+
+
+
+# configuration params are copied from @artgor kernel:
+# https://www.kaggle.com/artgor/brute-force-feature-engineering
+if False:
+    LGB_PARAMS = {
+        'objective': 'regression',
+        'metric': 'mae',
+        'verbosity': -1,
+        'boosting_type': 'gbdt',
+        'learning_rate': 0.3,
+        'num_leaves': 128,
+        'min_child_samples': 79,
+        'max_depth': 9,
+        'subsample_freq': 1,
+        'subsample': 0.9,
+        'bagging_seed': 11,
+        'reg_alpha': 0.1,
+        'reg_lambda': 0.3,
+        'colsample_bytree': 1.0
+    }
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.05,
+    'num_leaves': 40,
+    'min_child_samples': 60,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+Wall time: 0 ns
+Training until validation scores don't improve for 1000 rounds.
+[100]	training's l1: 2.12339	valid_1's l1: 2.13196
+[200]	training's l1: 1.764	valid_1's l1: 1.78082
+[300]	training's l1: 1.60269	valid_1's l1: 1.62561
+[400]	training's l1: 1.49864	valid_1's l1: 1.52638
+[500]	training's l1: 1.42123	valid_1's l1: 1.45303
+[600]	training's l1: 1.36188	valid_1's l1: 1.39769
+[700]	training's l1: 1.31537	valid_1's l1: 1.35502
+[800]	training's l1: 1.27652	valid_1's l1: 1.31943
+[900]	training's l1: 1.24275	valid_1's l1: 1.2892
+[1000]	training's l1: 1.21425	valid_1's l1: 1.26379
+[1100]	training's l1: 1.18818	valid_1's l1: 1.24077
+[1200]	training's l1: 1.16392	valid_1's l1: 1.21957
+[1300]	training's l1: 1.1424	valid_1's l1: 1.20096
+[1400]	training's l1: 1.12264	valid_1's l1: 1.1841
+[1500]	training's l1: 1.10552	valid_1's l1: 1.16992
+[1600]	training's l1: 1.08857	valid_1's l1: 1.15565
+[1700]	training's l1: 1.07287	valid_1's l1: 1.14276
+[1800]	training's l1: 1.05874	valid_1's l1: 1.13128
+[1900]	training's l1: 1.04502	valid_1's l1: 1.12006
+[2000]	training's l1: 1.03185	valid_1's l1: 1.10936
+[2100]	training's l1: 1.01829	valid_1's l1: 1.09833
+[2200]	training's l1: 1.00553	valid_1's l1: 1.08793
+[2300]	training's l1: 0.99406	valid_1's l1: 1.07894
+[2400]	training's l1: 0.98242	valid_1's l1: 1.06969
+[2500]	training's l1: 0.971566	valid_1's l1: 1.06125
+[2600]	training's l1: 0.961321	valid_1's l1: 1.05327
+[2700]	training's l1: 0.951648	valid_1's l1: 1.04622
+[2800]	training's l1: 0.942572	valid_1's l1: 1.03938
+[2900]	training's l1: 0.933835	valid_1's l1: 1.033
+[3000]	training's l1: 0.925337	valid_1's l1: 1.02677
+Did not meet early stopping. Best iteration is:
+[3000]	training's l1: 0.925337	valid_1's l1: 1.02677
+
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.05,
+    'num_leaves': 64,
+    'min_child_samples': 60,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+Training until validation scores don't improve for 1000 rounds.
+[100]	training's l1: 1.9417	valid_1's l1: 1.95552
+[200]	training's l1: 1.59624	valid_1's l1: 1.62064
+[300]	training's l1: 1.446	valid_1's l1: 1.47827
+[400]	training's l1: 1.34755	valid_1's l1: 1.38499
+[500]	training's l1: 1.27587	valid_1's l1: 1.31915
+[600]	training's l1: 1.22061	valid_1's l1: 1.26923
+[700]	training's l1: 1.17765	valid_1's l1: 1.23134
+[800]	training's l1: 1.13993	valid_1's l1: 1.1984
+[900]	training's l1: 1.10835	valid_1's l1: 1.17132
+[1000]	training's l1: 1.08097	valid_1's l1: 1.14841
+[1100]	training's l1: 1.05703	valid_1's l1: 1.12887
+[1200]	training's l1: 1.03435	valid_1's l1: 1.11051
+[1300]	training's l1: 1.0145	valid_1's l1: 1.09514
+[1400]	training's l1: 0.996567	valid_1's l1: 1.08129
+[1500]	training's l1: 0.980022	valid_1's l1: 1.06883
+[1600]	training's l1: 0.963817	valid_1's l1: 1.05662
+[1700]	training's l1: 0.948758	valid_1's l1: 1.04547
+[1800]	training's l1: 0.93405	valid_1's l1: 1.03436
+[1900]	training's l1: 0.920572	valid_1's l1: 1.02446
+[2000]	training's l1: 0.90836	valid_1's l1: 1.01569
+[2100]	training's l1: 0.894129	valid_1's l1: 1.00522
+[2200]	training's l1: 0.882091	valid_1's l1: 0.996478
+[2300]	training's l1: 0.870494	valid_1's l1: 0.988275
+[2400]	training's l1: 0.859382	valid_1's l1: 0.980277
+[2500]	training's l1: 0.848724	valid_1's l1: 0.972779
+[2600]	training's l1: 0.838751	valid_1's l1: 0.965963
+[2700]	training's l1: 0.829131	valid_1's l1: 0.959465
+[2800]	training's l1: 0.819919	valid_1's l1: 0.953191
+[2900]	training's l1: 0.810855	valid_1's l1: 0.947139
+[3000]	training's l1: 0.802126	valid_1's l1: 0.941407
+Did not meet early stopping. Best iteration is:
+[3000]	training's l1: 0.802126	valid_1's l1: 0.941407
+
+
+
+
+type	cv_score
+0	1JHN	-0.417238
+1	1JHC	0.486269
+2	2JHH	-1.083128
+3	2JHN	-1.237617
+4	2JHC	-0.403092
+5	3JHH	-1.119319
+6	3JHC	-0.459554
+7	3JHN	-1.526758
+And cv mean score:
+
+np.mean(list(cv_scores.values()))
+-0.720054497925786
+
+
+the way to go:
+CV 1.477 LB -1.945
+1JHC 0.595 -0.513
+2JHH 0.113 -2.17
+1JHN 0.334 -1.096
+2JHN 0.273 -1.294
+2JHC 0.252 -1.354
+3JHH 0.149 -1.9
+3JHC 0.279 -1.27
+3JHN 0.107 -2.22

@@ -3,6 +3,7 @@
 /download
 /input
 /output
+/input_added
 
 #catboost
 /src/catboost_info
