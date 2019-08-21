@@ -479,7 +479,22 @@ np.mean(list(cv_scores.values()))
 -0.720054497925786
 
 
-the way to go:
+type	cv_score
+0	1JHN	-0.837573
+1	1JHC	-0.312970
+2	2JHH	-1.751563
+3	2JHN	-1.828418
+4	2JHC	-1.275723
+5	3JHH	-1.839542
+6	3JHC	-1.225006
+7	3JHN	-2.018859
+
+np.mean(list(cv_scores.values()))
+-1.3862067347999287
+
+
+
+other kernels:
 CV 1.477 LB -1.945
 1JHC 0.595 -0.513
 2JHH 0.113 -2.17
@@ -489,3 +504,14 @@ CV 1.477 LB -1.945
 3JHH 0.149 -1.9
 3JHC 0.279 -1.27
 3JHN 0.107 -2.22
+
+With brute Force
+[9900]	training's l1: 0.0617155	valid_1's l1: 0.407746
+[10000]	training's l1: 0.0611265	valid_1's l1: 0.407735
+Did not meet early stopping. Best iteration is:
+[10000]	training's l1: 0.0611265	valid_1's l1: 0.407735
+-0.8971369188696069
+
+
+
+
