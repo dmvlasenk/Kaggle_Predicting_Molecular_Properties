@@ -1,37 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Core Idea
 
-# Despite a lot of creeping Physics and Chemistry knowledge introduced in the description, this competition is more about Geometry and pattern matching.
-# 
-# The hypothesis of this kernel is next:
-# 1. If we have two similar sets of atoms with the same distances between them and the same types - the scalar coupling constant should be very close.
-# 2. More closest atoms to the pair of atoms under prediction have higher influence on scalar coupling constant then those with higher distance
-# 
-# So, basically, this problem could be dealt with some kind of K-Nearest Neighbor algorithm or any tree-based - e.g. LightGBM, in case we can find some representation which would describe similar configurations with similar feature sets.
-# 
-# Each atom is described with 3 cartesian coordinates. This representation is not stable. Each coupling pair is located in a different point in space and two similar coupling sets would have very different X,Y,Z.
-# 
-# So, instead of using coordinates let's consider next system:
-# 1. Take each pair of atoms as two first core atoms
-# 2. Calculate the center between the pair
-# 3. Find all n-nearest atoms to the center (excluding first two atoms)
-# 4. Take two closest atoms from step 3 - they will be 3rd and 4th core atoms
-# 5. Calculate the distances from 4 core atoms to the rest of the atoms and to the core atoms as well
-# 
-# Using this representation each atom position can be described by 4 distances from the core atoms. This representation is stable to rotation and translation. And it's suitable for pattern-matching. So, we can take a sequence of atoms, describe each by 4 distances + atom type(H,O,etc) and looking up for the same pattern we can find similar configurations and detect scalar coupling constant.
-# 
-# Here I used LightGBM, because sklearn KNN can't deal with the amount of data. My blind guess is that hand-crafted KNN can outperform LightGBM.
-# 
-# Let's code the solution!
-
-# ## Import modules, set options
-
-# In[149]:
-
-
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 import pandas as pd
 import numpy as np
@@ -94,48 +64,23 @@ train_csv['molecule_index'] = train_csv.molecule_name.str.replace('dsgdb9nsd_', 
 train_csv = train_csv[['molecule_index', 'atom_index_0', 'atom_index_1', 'type', 'scalar_coupling_constant']]
 train_csv.head(10)
 
-
-# #### Filter
-
-# In[153]:
-
-
+##filter
 #train_csv, _ = train_test_split(train_csv, test_size=0.999, random_state=42)
 
 
-# #### Train_CSV Params
-
-# In[154]:
-
 
 train_csv.describe()
-
-
-# In[155]:
-
 
 print('Shape: ', train_csv.shape)
 print('Total: ', train_csv.memory_usage().sum())
 train_csv.memory_usage()
 
-
-# In[156]:
-
-
 submission_csv = pd.read_csv(f'{DATA_PATH}\\sample_submission.csv', index_col='id')
-
-
-# In[157]:
-
 
 test_csv = pd.read_csv(f'{DATA_PATH}\\test.csv', index_col='id', dtype=train_dtypes)
 test_csv['molecule_index'] = test_csv['molecule_name'].str.replace('dsgdb9nsd_', '').astype('int32')
 test_csv = test_csv[['molecule_index', 'atom_index_0', 'atom_index_1', 'type']]
 test_csv.head(10)
-
-
-# In[158]:
-
 
 structures_dtypes = {
     'molecule_name': 'category',
@@ -152,13 +97,6 @@ structures_csv['atom'] = structures_csv['atom'].replace(ATOMIC_NUMBERS).astype('
 structures_csv.head(10)
 
 
-# ## Build Distance Dataset
-
-# ### Functions
-
-# In[160]:
-
-
 def build_type_dataframes(base, structures, coupling_type):
     base = base[base['type'] == coupling_type].drop('type', axis=1).copy()
     base = base.reset_index()
@@ -166,8 +104,6 @@ def build_type_dataframes(base, structures, coupling_type):
     structures = structures[structures['molecule_index'].isin(base['molecule_index'])]
     return base, structures
 
-
-# In[161]:
 
 
 def add_coordinates(base, structures, index):
@@ -183,16 +119,10 @@ def add_coordinates(base, structures, index):
     return df
 
 
-# In[162]:
-
-
 def add_atoms(base, atoms):
     df = pd.merge(base, atoms, how='inner',
                   on=['molecule_index', 'atom_index_0', 'atom_index_1'])
     return df
-
-
-# In[163]:
 
 
 def merge_all_atoms(base, structures):
@@ -240,12 +170,6 @@ def add_n_atoms(base, structures):
     return pd.merge(base, dfs, left_on='molecule_index', right_index=True)
 
 
-# In[167]:
-
-
-
-# In[168]:
-
 
 def take_n_atoms(df, n_atoms, four_start=4):
     labels = []
@@ -279,10 +203,6 @@ def map_atom_info(df, atom_idx):
     return df
 
 
-# ### Проверяем, что для каждого типа молекулы только  atom_1 принимает только одно значение
-
-# In[170]:
-
 
 invest0 = map_atom_info(train_csv, 1)
 invest0 = invest0[['type','atom_1']]
@@ -292,6 +212,15 @@ invest0.groupby(['type']).mean()
 # ## New heading
 
 # In[171]:
+
+
+def add_distance_to_center(df):
+    df['d_c'] = ((
+                         (df['x'] - df['x_c']) ** np.float32(2) +
+                         (df['y'] - df['y_c']) ** np.float32(2) +
+                         (df['z'] - df['z_c']) ** np.float32(2)
+                 ) ** np.float32(0.5))
+
 
 
 def add_atoms(base, atoms):
@@ -340,19 +269,18 @@ def build_atoms(base_from, structures_from, n_atoms):
 # In[172]:
 
 
-def add_distance_to_center(df):
-    df['d_c'] = ((
-        ( df['x'] -  df['x_c'])**np.float32(2) +
-        ( df['y'] -  df['y_c'])**np.float32(2) + 
-        ( df['z'] -  df['z_c'])**np.float32(2)
-    )**np.float32(0.5))
-    
+def cross_prod(a, b):
+    a0 = a.iloc[:, 0]
+    a1 = a.iloc[:, 1]
+    a2 = a.iloc[:, 2]
 
-###TODO: try to use df.columns[0], etc  
-def cross_prod(v1, v2): 
-    outp0 = v1[1] * v2[2] - v1[2] * v2[1]
-    outp1 = v1[2] * v2[0] - v1[0] * v2[2]
-    outp2 = v1[0] * v2[1] - v1[1] * v2[0]
+    b0 = b.iloc[:, 0]
+    b1 = b.iloc[:, 1]
+    b2 = b.iloc[:, 2]
+
+    outp0 = a1 * b2 - a2 * b1
+    outp1 = a2 * b0 - a0 * b2
+    outp2 = a0 * b1 - a1 * b0
     outp = pd.concat([outp0, outp1,outp2], axis=1)
     return outp
 
@@ -369,9 +297,9 @@ def add_axis_x(df):
 
 
 def add_axis_y(df):
-    r_vec = pd.concat([df.x_2 - df.x_c, 
-                 df.y_2 - df.y_c,
-                 df.z_2 - df.z_c], axis=1)
+    r_vec = pd.concat([df.cm_x - df.x_c,
+                 df.cm_y - df.y_c,
+                 df.cm_z - df.z_c], axis=1)
     axis_vec = pd.concat([df['ax_x'], 
                           df['ax_y'], 
                           df['ax_z']], axis=1)
@@ -384,10 +312,10 @@ def add_axis_y(df):
     df['ay_z'] = yDir[2] / yDirNorm    
 
 def add_axis_z(df):    
-    r_vec = pd.concat([df.x_2 - df.x_c, 
-         df.y_2 - df.y_c,
-         df.z_2 - df.z_c], axis=1)
-    axis_x_vec = pd.concat([df['ax_x'], 
+    r_vec = pd.concat([df.cm_x - df.x_c,
+                 df.cm_y - df.y_c,
+                 df.cm_z - df.z_c], axis=1)
+    axis_x_vec = pd.concat([df['ax_x'],
                       df['ax_y'], 
                       df['ax_z']], axis=1)
     axis_x_vec.columns = [0, 1, 2]
@@ -396,9 +324,9 @@ def add_axis_z(df):
                       df['ay_z']], axis=1)
     axis_y_vec.columns = [0, 1, 2]
     axis_z_vec = cross_prod(axis_x_vec, axis_y_vec)
-    df['az_x'] = axis_z_vec[0] 
-    df['az_y'] = axis_z_vec[1] 
-    df['az_z'] = axis_z_vec[2] 
+    df['az_x'] = axis_z_vec.iloc[:, 0]
+    df['az_y'] = axis_z_vec.iloc[:, 1]
+    df['az_z'] = axis_z_vec.iloc[:, 2]
 
 
     
@@ -418,7 +346,19 @@ def add_r(df):
     n_atoms = len([col for col in df if col.startswith('x_')]) - 1
     for i in range(1, n_atoms):
             add_r_per_atom(df, i)
-            
+
+def add_center_of_mass(df, n_atoms):
+    df['cm_x'] = 0
+    df['cm_y'] = 0
+    df['cm_z'] = 0
+    for suffix in range(0, n_atoms):
+        x = df[f'x_{suffix}'].fillna(0)
+        y = df[f'y_{suffix}'].fillna(0)
+        z = df[f'z_{suffix}'].fillna(0)
+        df.cm_x += x
+        df.cm_y += y
+        df.cm_z += z
+
 def build_couple_dataframe(some_csv, structures_csv, coupling_type, n_atoms=10):
     base, structures = build_type_dataframes(some_csv, structures_csv, coupling_type)
     base = add_coordinates(base, structures, 0)
@@ -427,7 +367,7 @@ def build_couple_dataframe(some_csv, structures_csv, coupling_type, n_atoms=10):
     
     atoms = build_atoms(base, structures, n_atoms)
     df = add_atoms(base, atoms)
-    
+    add_center_of_mass(df, n_atoms)
     add_axis_x(df)
     add_axis_y(df)
     add_axis_z(df)
@@ -440,14 +380,24 @@ def build_couple_dataframe(some_csv, structures_csv, coupling_type, n_atoms=10):
 
 #some_csv = test_csv #[:600]
 types = train_csv.type.unique()
-n_atoms = train_csv.atom_index_0.max()
-for coupling_type in types:
-    cur_test_csv = test_csv[test_csv.type == coupling_type]
-    cur_train_csv = train_csv[train_csv.type == coupling_type]
-    n_atoms = cur_train_csv.atom_index_0.max()
-    df_test = build_couple_dataframe(cur_test_csv, structures_csv, coupling_type, n_atoms)
-    df_test.to_csv(f'{INPUT_ADDED}/test_{coupling_type}.csv')
-    df_train = build_couple_dataframe(cur_train_csv, structures_csv, coupling_type, n_atoms)
-    df_train.to_csv(f'{INPUT_ADDED}/{coupling_type}.csv')
 
-    
+
+coupling_type = '1JHN' # coupling_type1
+cur_train_csv = train_csv[train_csv.type == coupling_type]
+n_atoms = cur_train_csv.atom_index_0.max()
+df_train = build_couple_dataframe(cur_train_csv, structures_csv, coupling_type, n_atoms)
+df_train.to_csv(f'{INPUT_ADDED}/{coupling_type}.csv')
+
+
+if False:
+    for coupling_type1 in types:
+        coupling_type = '1JHN' # coupling_type1
+        cur_test_csv = test_csv[test_csv.type == coupling_type]
+        cur_train_csv = train_csv[train_csv.type == coupling_type]
+        n_atoms = cur_train_csv.atom_index_0.max()
+        df_test = build_couple_dataframe(cur_test_csv, structures_csv, coupling_type, n_atoms)
+        df_test.to_csv(f'{INPUT_ADDED}/test_{coupling_type}.csv')
+        df_train = build_couple_dataframe(cur_train_csv, structures_csv, coupling_type, n_atoms)
+        df_train.to_csv(f'{INPUT_ADDED}/{coupling_type}.csv')
+
+
