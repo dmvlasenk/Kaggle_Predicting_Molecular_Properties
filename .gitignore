@@ -4,6 +4,7 @@
 /input
 /output
 /input_added
+/venv
 
 #catboost
 /src/catboost_info
