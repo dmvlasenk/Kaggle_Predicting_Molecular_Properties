@@ -505,13 +505,93 @@ CV 1.477 LB -1.945
 3JHC 0.279 -1.27
 3JHN 0.107 -2.22
 
-With brute Force
+With brute Force 1JHN
 [9900]	training's l1: 0.0617155	valid_1's l1: 0.407746
 [10000]	training's l1: 0.0611265	valid_1's l1: 0.407735
 Did not meet early stopping. Best iteration is:
 [10000]	training's l1: 0.0611265	valid_1's l1: 0.407735
 -0.8971369188696069
 
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.03,
+    'num_leaves': 150,
+    'min_child_samples': 30,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
 
+With distances
+[10000]	training's l1: 0.0483283	valid_1's l1: 0.345109
+-1.063895705272427
 
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.1,
+    'num_leaves': 20,
+    'min_child_samples': 30,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+Without brut:
+[10000]	training's l1: 0.0564643	valid_1's l1: 0.337382
+-1.0865381983680256
+With brut:
+[10000]	training's l1: 0.0679706	valid_1's l1: 0.339346
+-1.0807349612270603
 
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.1,
+    'num_leaves': 15,
+    'min_child_samples': 30,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+
+LGB_PARAMS = {
+    'objective': 'regression',
+    'metric': 'mae',
+    'verbosity': -1,
+    'boosting_type': 'gbdt',
+    'learning_rate': 0.1,
+    'num_leaves': 64,
+    'min_child_samples': 30,
+    'max_depth': 9,
+    'reg_alpha': 0.01,
+    'reg_lambda': 0.3,
+    'bagging_freq': 2000,
+    'bagging_fraction': 0.7,
+    'bagging_seed': 11,
+    'colsample_bytree': 1.0
+}
+with brut
+[10000]	training's l1: 0.329341	valid_1's l1: 0.705505
+-0.3488439585181781
+without brut
+[10000]	training's l1: 0.339376	valid_1's l1: 0.702721
+-0.35278479120853873
