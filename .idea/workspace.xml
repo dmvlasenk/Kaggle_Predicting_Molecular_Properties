@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd5cff7-4d56-491a-8d57-81e9d540531c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/champs-scalar-coupling.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/from_kaggle/.ipynb_checkpoints/keras-neural-net-and-distance-features-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/from_kaggle/.ipynb_checkpoints/keras-neural-net-and-distance-features-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ideas/tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ideas/tests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Non_Filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Non_Filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SingleTraning-Copy1.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SingleTraning.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleTraning.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,18 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/champs-scalar-coupling.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-        <option value="$PROJECT_DIR$/.idea/.gitignore" />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="1Povik4DHbqOFcBSZkxgUONyJbp" />
   <component name="PropertiesComponent">
@@ -43,7 +44,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Non_Filter">
+    <configuration name="Non_Filter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="champs-scalar-coupling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Non_Filter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="preprocc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="champs-scalar-coupling" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Non_Filter" />
         <item itemvalue="Python.preprocc" />
       </list>
     </recent_temporary>
@@ -104,6 +127,21 @@
           <url>file://$PROJECT_DIR$/src/Non_Filter.py</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/test.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/test.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/test.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

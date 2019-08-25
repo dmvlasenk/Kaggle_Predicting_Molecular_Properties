@@ -11,26 +11,18 @@ LGB_PARAMS = {
     'objective': 'regression',
     'metric': 'mae',
     'verbosity': -1,
-    'boosting_type': 'gbdt',
-    'learning_rate': 0.1,
-    'num_leaves': 50,
-    'min_child_samples': 30,
-    'max_depth': 11,
-    'reg_alpha': 0.01,
-    'reg_lambda': 0.3,
-    'bagging_freq': 2000,
-    'bagging_fraction': 0.7,
-    'bagging_seed': 11,
-    'colsample_bytree': 1.0
+    'boosting_type': 'gbdt'
 }
 
 MODEL_PARAMS = {
-        '1JHN': 10,
-        '1JHC': 15,
-        '2JHH': 13,
-        '2JHN': 13,
-        '2JHC': 13,
-        '3JHH': 13,
-        '3JHC': 15,
-        '3JHN': 15
+        '1JHN': 11,
+        '1JHC': 11,
+        '2JHH': 11,
+        '2JHN': 11,
+        '2JHC': 11,
+        '3JHH': 11,
+        '3JHC': 11,
+        '3JHN': 11
     }
+
+COUNT_DISTANCES = 6

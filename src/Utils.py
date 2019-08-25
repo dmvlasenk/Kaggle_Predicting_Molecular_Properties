@@ -41,26 +41,32 @@ def add_distance_between(df, suffix1, suffix2):
 
 def add_distances(df, n_atoms):
     for i in range(1, n_atoms):
-        for vi in range(min(4, i)):
+        for vi in range(min(Config.COUNT_DISTANCES, i)):
             add_distance_between(df, i, vi)
 
-def take_n_atoms(df, n_atoms, four_start=4):
+def take_n_atoms(df, n_atoms, four_start=Config.COUNT_DISTANCES):
     labels = []
     for i in range(2, n_atoms):
         label = f'atom_{i}'
         labels.append(label)
+    if True:
+        for i in range(1, n_atoms):
+            labels.append(f'r_x_{i}')
+        for i in range(2, n_atoms):
+            labels.append(f'r_y_{i}')
+        for i in range(3, n_atoms):
+            labels.append(f'r_z_{i}')
+    if True:
+        for i in range(2, n_atoms):
+            num = min(i, Config.COUNT_DISTANCES) if i < four_start else Config.COUNT_DISTANCES
+            for j in range(num):
+                labels.append(f'd_{i}_{j}')
+        #labels.remove('d_1_0')
+    #dependent_vals = ['d_2_0', 'd_2_1', 'd_3_0', 'd_9_1']
+    #labels = [x for x in labels if x not in dependent_vals]
 
-    for i in range(1, n_atoms):
-        labels.append(f'r_x_{i}')
-    for i in range(2, n_atoms):
-        labels.append(f'r_y_{i}')
-    for i in range(3, n_atoms):
-        labels.append(f'r_z_{i}')
-    for i in range(n_atoms):
-        num = min(i, 4) if i < four_start else 4
-        for j in range(num):
-            labels.append(f'd_{i}_{j}')
-    labels.remove('d_1_0')
+
+
     if 'scalar_coupling_constant' in df:
         labels.append('scalar_coupling_constant')
     #labels = labels + brute_columns

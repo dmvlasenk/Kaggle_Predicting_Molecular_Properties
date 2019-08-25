@@ -595,3 +595,15 @@ with brut
 without brut
 [10000]	training's l1: 0.339376	valid_1's l1: 0.702721
 -0.35278479120853873
+
+keras https://www.kaggle.com/xwxw2929/keras-neural-net-and-distance-features
+Total training time:  5:02:29.627691
+1JHC : cv score is  -0.4814433
+2JHH : cv score is  -2.1609457
+1JHN : cv score is  -1.0991564
+2JHN : cv score is  -2.2432249
+2JHC : cv score is  -1.605876
+3JHH : cv score is  -2.1098902
+3JHC : cv score is  -1.5108138
+3JHN : cv score is  -2.4077184
+total cv score is -1.702383577823639
